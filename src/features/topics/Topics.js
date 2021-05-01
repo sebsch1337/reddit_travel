@@ -1,10 +1,9 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectTopics, selectedIndex } from './topicsSlice';
 import { Topic } from '../../components/Topic';
 
 export const Topics = () => {
-    const dispatch = useDispatch();
     const topics = useSelector(selectTopics);
     const selectedTopicId = useSelector(selectedIndex);
 

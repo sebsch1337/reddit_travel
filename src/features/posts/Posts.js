@@ -15,7 +15,7 @@ export const Posts = () => {
 
     useEffect(() => {
         dispatch(loadPostsForTopic(topics[selectedTopicId]));
-    }, [dispatch, selectedTopicId])
+    }, [dispatch, topics, selectedTopicId])
 
     if (postsAreLoading) {
         console.log('Loading posts...');
