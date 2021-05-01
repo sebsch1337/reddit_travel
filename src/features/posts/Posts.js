@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { PostList } from '../../components/PostList';
 import { selectPosts, loadPostsForTopic, isLoadingPosts, failedToLoadPosts, noPostsFound } from './postsSlice';
+import { selectTopics, selectedIndex } from '../topics/topicsSlice';
 
 export const Posts = () => {
     const dispatch = useDispatch();
@@ -9,11 +10,12 @@ export const Posts = () => {
     const postsAreLoading = useSelector(isLoadingPosts);
     const loadingPostsFailed = useSelector(failedToLoadPosts);
     const postsNotFound = useSelector(noPostsFound);
-    const topic = "Travel";
+    const topics = useSelector(selectTopics);
+    const selectedTopicId = useSelector(selectedIndex);
 
     useEffect(() => {
-        dispatch(loadPostsForTopic(topic));
-    }, [dispatch, topic])
+        dispatch(loadPostsForTopic(topics[selectedTopicId]));
+    }, [dispatch, selectedTopicId])
 
     if (postsAreLoading) {
         console.log('Loading posts...');
@@ -33,10 +35,6 @@ export const Posts = () => {
     const loadedPosts = posts ? posts : [];
 
     return (
-        <div>
-            <ul>
-                <PostList posts={loadedPosts} />
-            </ul>
-        </div>
+        <PostList posts={loadedPosts} />
     )
 };

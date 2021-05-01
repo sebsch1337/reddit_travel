@@ -41,9 +41,6 @@ const postsSlice = createSlice({
     }
 });
 
-// EXPORT ACTIONS
-// export const { addCard } = cardsSlice.actions;
-
 // EXPORT SELECTORS
 export const selectPosts = (state) => state.posts.posts;
 export const isLoadingPosts = (state) => state.posts.isLoadingPosts;

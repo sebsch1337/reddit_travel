@@ -82,8 +82,15 @@ h2 {
 	font-size: 12px;
 }
 
+#root {
+	display: flex;
+	justify-content: center;
+}
+
 .post-list {
-	width: 800px;
+	overflow: hidden;
+	width: 60%;
+	min-width: 400px;
 }
 
 header {
@@ -92,17 +99,17 @@ header {
 }
 
 main {
-    display: flex;
-    justify-content: space-around;
+    display: block;
+    justify-content: center;
     background-color: rgb(0, 0, 0);
 }
 
 article {
-	display: inline-flex;
-	margin: 25px auto;
+	display: flex;
+	margin: 25px;
 	border: 1px solid black;
 	border-radius: 5px;
-    flex-grow: inherit;
+	max-width: 100%;
 }
 
 .article-info {
@@ -114,6 +121,8 @@ article {
 
 .article-box {
 	display: block;
+	justify-content: center;
+	width: 100%;
 	border-left: 1px solid black;
 }
 
@@ -123,6 +132,7 @@ article {
 }
 
 article h1 {
+	padding: 3px;
 	font-weight: bold;
 	font-size: 18px;
 }
@@ -134,4 +144,8 @@ article h2 {
 article p {
 	padding: 5px;
 	font-size: 14px;
+}
+
+article img {
+	max-width: 100%;
 }

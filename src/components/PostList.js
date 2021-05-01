@@ -6,11 +6,11 @@ export const PostList = ({posts}) => {
         <div className="post-list">
             {posts.map((post, index) => {
                 // console.log(post);
-                if (!post.data.selftext | index === 0) {
+                if (index === 0) {
                     return null;
                 }
 
-                return <Post key={index} post={post.data} />;
+                return <Post key={index} post={post.data} img={false} />;
             })}
         </div>
     );
