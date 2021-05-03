@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 export const loadPostsForTopic = createAsyncThunk(
     'posts/loadPostsForTopic',
     async(topic) => {
-        console.log('Fetching posts for '+topic);
+        // console.log('Fetching posts for '+topic);
         const response = await fetch(`https://www.reddit.com/r/${topic}.json`);
         const json = await response.json();
         return json;
@@ -34,7 +34,7 @@ const postsSlice = createSlice({
                 state.failedToLoadPosts = false;            
         },
         [loadPostsForTopic.rejected]: (state, action) => {
-            console.log('LOADING POSTS FAILED');
+            // console.log('LOADING POSTS FAILED');
             state.isLoadingPosts = false;
             state.failedToLoadPosts = true;
         }

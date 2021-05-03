@@ -8,7 +8,7 @@ const topicsSlice = createSlice({
     },
     reducers: {
         setTopic(state, action) {
-            state.selectedIndex = action.payload;
+            state.selectedIndex = state.topics.findIndex(arr => arr === action.payload);
         }
     }
 });

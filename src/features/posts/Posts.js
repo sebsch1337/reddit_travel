@@ -18,17 +18,17 @@ export const Posts = () => {
     }, [dispatch, topics, selectedTopicId])
 
     if (postsAreLoading) {
-        console.log('Loading posts...');
+        // console.log('Loading posts...');
         return <div>Loading posts...</div>;
     }
 
     if (loadingPostsFailed) {
-        console.log('Loading posts failed...');
+        // console.log('Loading posts failed...');
         return <div>Failed to load posts</div>;
     }
 
     if (postsNotFound) {
-        console.log('No posts available...');
+        // console.log('No posts available...');
         return <div>No posts available</div>;
     }
 
