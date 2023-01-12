@@ -1,0 +1,164 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://fonts.gstatic.com/s/materialicons/v85/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+  }
+  
+  .material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 22px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+	-webkit-font-feature-settings: 'liga';
+	-webkit-font-smoothing: antialiased;
+  }
+
+body {
+	font-family: 'Roboto', sans-serif;
+	justify-content: center;
+	display: flex;
+}
+
+h1 {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 12px;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header p {
+	font-size: 14px;
+}
+
+header select {
+	width: 250px;
+	height: 25px;
+}
+
+.select-topic {
+	justify-content: center;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+}
+
+.post-list {
+	overflow: hidden;
+	width: 40%;
+	min-width: 400px;
+}
+
+header {
+    border-bottom: 1px solid black;
+    height: 4.0rem;
+}
+
+article {
+	display: flex;
+	margin: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	max-width: 100%;
+}
+
+.article-info {
+	padding: 5px;
+	justify-content: center;
+	font-size: 14px;
+	text-align: center;
+}
+
+.article-box {
+	display: block;
+	justify-content: center;
+	width: 100%;
+	border-left: 1px solid black;
+}
+
+.article-header {
+	padding: 5px;
+	border-bottom: 1px solid gray;
+}
+
+article h1 {
+	padding: 3px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+article h2 {
+	font-style: italic;
+}
+
+article p {
+	padding: 5px;
+	font-size: 14px;
+}
+
+article img {
+	max-width: 100%;
+}
